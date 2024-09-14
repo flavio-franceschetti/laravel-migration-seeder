@@ -20,11 +20,9 @@ class PageController extends Controller
     }
 
     public function allTrains(){
-        $title = 'I TRENI';
-
         $trains = Train::all();
         // $trains = [];
 
-        return view('trains', compact('title', 'trains'));
+        return view('trains', compact('trains'));
     }
 }
