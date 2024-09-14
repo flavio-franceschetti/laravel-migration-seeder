@@ -37,7 +37,7 @@ class TrainTableSeeder extends Seeder
             $newTrain->departure_date = $faker->date();
             $newTrain->arrival_time = $faker->time();
             $newTrain->arrival_date = $faker->date();
-            $newTrain->train_code = $faker->numberBetween(100, 999);
+            $newTrain->train_code = $faker->numberBetween(100,);
             $newTrain->carriage_number = $faker->randomDigit();
             $newTrain->in_time = $faker->boolean();
             $newTrain->deleted = $faker->boolean();
