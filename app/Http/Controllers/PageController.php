@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Train;
+use Carbon\Carbon;
 
 class PageController extends Controller
 {
@@ -20,7 +21,7 @@ class PageController extends Controller
     }
 
     public function allTrains(){
-        $trains = Train::all();
+        $trains = Train::all()->where('departure_date', '>=', Carbon::today());
         // $trains = [];
 
         return view('trains', compact('trains'));
